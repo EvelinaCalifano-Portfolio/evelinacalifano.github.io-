@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Evelina Califano — B2B Marketing Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Syne:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --dark: #0A1628;
+  --dark2: #111F35;
+  --teal: #00B8A4;
+  --teal-dim: rgba(0,184,164,0.12);
+  --teal-mid: rgba(0,184,164,0.25);
+  --gold: #E8A245;
+  --gold-dim: rgba(232,162,69,0.12);
+  --mid: #7A8FA6;
+  --light: #F2F5F7;
+  --white: #ffffff;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'Syne', system-ui, sans-serif;
+  --border: rgba(255,255,255,0.07);
+  --border-light: rgba(0,0,0,0.07);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--sans);background:var(--white);color:var(--dark);overflow-x:hidden;}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:16px 56px;background:rgba(10,22,40,0.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+.nav-logo{font-family:var(--serif);font-size:20px;color:var(--white);letter-spacing:0.5px;font-weight:600;}
+.nav-logo em{color:var(--teal);font-style:italic;}
+.nav-links{display:flex;gap:36px;align-items:center;}
+.nav-links a{color:rgba(255,255,255,0.55);text-decoration:none;font-size:12px;font-weight:500;letter-spacing:1px;text-transform:uppercase;transition:color 0.2s;}
+.nav-links a:hover{color:var(--teal);}
+.nav-cta{background:var(--teal);color:var(--dark)!important;padding:8px 20px;border-radius:6px;font-weight:600!important;}
+.nav-cta:hover{opacity:0.88;transform:translateY(-1px);}
+
+/* ── HERO ── */
+.hero{min-height:100vh;background:var(--dark);display:flex;align-items:center;padding:120px 56px 80px;position:relative;overflow:hidden;}
+.hero-glow-1{position:absolute;top:-15%;right:-5%;width:700px;height:700px;background:radial-gradient(circle,rgba(0,184,164,0.09) 0%,transparent 65%);pointer-events:none;}
+.hero-glow-2{position:absolute;bottom:-20%;left:10%;width:500px;height:500px;background:radial-gradient(circle,rgba(232,162,69,0.06) 0%,transparent 65%);pointer-events:none;}
+.hero-grid-line{position:absolute;top:0;bottom:0;left:50%;width:1px;background:linear-gradient(to bottom,transparent,rgba(0,184,164,0.08),transparent);pointer-events:none;}
+.hero-inner{max-width:1160px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 400px;gap:72px;align-items:center;}
+
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--teal-dim);border:1px solid var(--teal-mid);padding:6px 16px;border-radius:100px;margin-bottom:28px;}
+.hero-badge-dot{width:7px;height:7px;background:var(--teal);border-radius:50%;animation:pulse 2.4s ease-in-out infinite;}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.5;transform:scale(1.4);}}
+.hero-badge span{font-size:11px;color:var(--teal);font-weight:600;letter-spacing:1px;text-transform:uppercase;}
+
+h1.hero-title{font-family:var(--serif);font-size:62px;line-height:1.08;color:var(--white);font-weight:600;margin-bottom:10px;}
+h1.hero-title em{color:var(--teal);font-style:italic;}
+.hero-subtitle{font-size:14px;color:rgba(255,255,255,0.4);font-weight:500;letter-spacing:2px;text-transform:uppercase;margin-bottom:28px;}
+.hero-desc{font-size:15px;color:rgba(255,255,255,0.65);line-height:1.8;margin-bottom:40px;max-width:500px;font-weight:300;}
+
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;}
+.btn-primary{padding:14px 30px;background:var(--teal);color:var(--dark);font-size:13px;font-weight:600;border-radius:8px;text-decoration:none;letter-spacing:0.5px;transition:all 0.2s;}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(0,184,164,0.28);}
+.btn-outline{padding:14px 30px;border:1px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.8);font-size:13px;font-weight:500;border-radius:8px;text-decoration:none;transition:all 0.2s;}
+.btn-outline:hover{border-color:var(--teal);color:var(--teal);}
+
+.hero-stats{display:flex;gap:36px;margin-top:56px;padding-top:48px;border-top:1px solid rgba(255,255,255,0.08);}
+.stat-num{font-family:var(--serif);font-size:36px;font-weight:600;color:var(--teal);line-height:1;}
+.stat-label{font-size:11px;color:rgba(255,255,255,0.38);margin-top:4px;line-height:1.45;letter-spacing:0.3px;}
+
+.hero-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:20px;padding:32px;position:relative;overflow:hidden;}
+.hero-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--teal),var(--gold));}
+.hc-label{font-size:10px;color:var(--teal);font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;}
+.metric-row{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.05);}
+.metric-row:last-child{border-bottom:none;padding-bottom:0;}
+.metric-icon{width:38px;height:38px;border-radius:10px;background:var(--teal-dim);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:17px;}
+.metric-val{font-size:17px;font-weight:600;color:var(--white);}
+.metric-val em{color:var(--teal);font-style:normal;}
+.metric-sub{font-size:11px;color:rgba(255,255,255,0.35);margin-top:2px;}
+
+/* ── ABOUT ── */
+#about{padding:100px 56px;background:var(--white);}
+.about-inner{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:start;}
+.section-eyebrow{font-size:11px;font-weight:600;color:var(--teal);letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;}
+.section-title{font-family:var(--serif);font-size:44px;line-height:1.1;font-weight:600;margin-bottom:20px;}
+.about-body p{font-size:15px;color:#4A5F72;line-height:1.85;margin-bottom:18px;font-weight:300;}
+.about-body p strong{color:var(--dark);font-weight:600;}
+.about-body p em{color:var(--teal);font-style:italic;}
+.companies-label{font-size:10px;font-weight:600;color:var(--mid);letter-spacing:2px;text-transform:uppercase;margin:32px 0 14px;}
+.companies-list{display:flex;flex-wrap:wrap;gap:10px;}
+.co-pill{padding:8px 20px;border-radius:8px;border:1px solid var(--border-light);font-size:13px;font-weight:600;color:var(--dark);}
+
+.timeline{padding-left:0;}
+.tl-item{display:flex;gap:18px;margin-bottom:32px;}
+.tl-col{display:flex;flex-direction:column;align-items:center;}
+.tl-dot{width:11px;height:11px;border-radius:50%;background:var(--teal);flex-shrink:0;margin-top:5px;}
+.tl-line{flex:1;width:1px;background:rgba(0,0,0,0.08);margin-top:8px;}
+.tl-date{font-size:11px;color:var(--teal);font-weight:600;letter-spacing:0.5px;margin-bottom:3px;}
+.tl-role{font-size:15px;font-weight:600;color:var(--dark);}
+.tl-co{font-size:13px;color:var(--mid);margin-top:2px;}
+.photo-placeholder{width:100%;aspect-ratio:3/4;background:linear-gradient(135deg,#E8F2F5 0%,#D0E8E8 100%);border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;border:2px dashed rgba(0,184,164,0.3);color:var(--teal);font-size:13px;font-weight:600;gap:10px;max-width:240px;margin-bottom:32px;}
+.photo-placeholder span{font-size:32px;}
+
+/* ── CASES ── */
+#cases{padding:100px 56px;background:var(--light);}
+.cases-inner{max-width:1160px;margin:0 auto;}
+.cases-grid{display:grid;gap:20px;margin-top:52px;}
+.case-card{background:var(--white);border-radius:16px;overflow:hidden;border:1px solid rgba(0,0,0,0.06);display:grid;grid-template-columns:5px 1fr;cursor:pointer;transition:transform 0.22s,box-shadow 0.22s;}
+.case-card:hover{transform:translateY(-4px);box-shadow:0 20px 56px rgba(0,0,0,0.1);}
+.case-stripe{background:var(--teal);}
+.case-stripe.gold{background:var(--gold);}
+.case-body{padding:28px 36px;}
+.case-top{display:flex;align-items:center;gap:12px;margin-bottom:14px;}
+.case-num{font-size:11px;font-weight:700;color:var(--teal);letter-spacing:1.5px;}
+.case-tag{font-size:11px;padding:3px 12px;border-radius:100px;background:var(--teal-dim);color:var(--teal);font-weight:600;letter-spacing:0.3px;}
+.case-tag.gold-tag{background:var(--gold-dim);color:#8B5E00;}
+.case-title{font-family:var(--serif);font-size:24px;font-weight:600;margin-bottom:10px;line-height:1.2;}
+.case-desc{font-size:14px;color:var(--mid);line-height:1.7;margin-bottom:20px;font-weight:300;}
+.case-pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;}
+.pill{background:var(--light);border-radius:8px;padding:5px 14px;font-size:12px;font-weight:600;color:var(--dark);}
+.case-cta{font-size:12px;font-weight:600;color:var(--teal);letter-spacing:0.5px;display:flex;align-items:center;gap:6px;}
+.case-cta::after{content:'→';transition:transform 0.2s;}
+.case-card:hover .case-cta::after{transform:translateX(4px);}
+
+/* ── MODAL ── */
+.modal-overlay{position:fixed;inset:0;background:rgba(10,22,40,0.85);backdrop-filter:blur(10px);z-index:500;display:flex;align-items:center;justify-content:center;padding:32px;opacity:0;pointer-events:none;transition:opacity 0.25s;}
+.modal-overlay.open{opacity:1;pointer-events:all;}
+.modal{background:var(--white);border-radius:20px;max-width:780px;width:100%;max-height:85vh;overflow-y:auto;position:relative;}
+.modal-header{padding:36px 40px 0;border-bottom:1px solid var(--border-light);padding-bottom:24px;}
+.modal-close{position:absolute;top:20px;right:24px;background:var(--light);border:none;width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;color:var(--mid);transition:background 0.2s;}
+.modal-close:hover{background:#e0e0e0;}
+.modal-eyebrow{font-size:11px;font-weight:600;color:var(--teal);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px;}
+.modal-title{font-family:var(--serif);font-size:32px;font-weight:600;line-height:1.15;margin-bottom:12px;}
+.modal-body{padding:28px 40px 40px;}
+.modal-section{margin-bottom:28px;}
+.modal-section h4{font-size:11px;font-weight:700;color:var(--mid);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px;}
+.modal-section p{font-size:14px;color:#4A5F72;line-height:1.8;font-weight:300;}
+.modal-section ul{padding-left:0;list-style:none;}
+.modal-section ul li{font-size:14px;color:#4A5F72;line-height:1.7;padding:5px 0;padding-left:18px;position:relative;font-weight:300;}
+.modal-section ul li::before{content:'▸';color:var(--teal);position:absolute;left:0;font-size:11px;top:7px;}
+.modal-results{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:8px;}
+.modal-result{background:var(--light);border-radius:12px;padding:16px;text-align:center;}
+.modal-result-num{font-family:var(--serif);font-size:28px;font-weight:600;color:var(--teal);}
+.modal-result-label{font-size:12px;color:var(--mid);margin-top:4px;line-height:1.4;}
+.modal-learn{background:var(--teal-dim);border-left:3px solid var(--teal);border-radius:0 8px 8px 0;padding:14px 18px;margin-top:8px;}
+.modal-learn p{font-size:13px;color:#1A5F56;line-height:1.7;font-style:italic;font-weight:400;}
+.modal-learn strong{font-weight:600;}
+
+/* ── RESULTS ── */
+#results{padding:100px 56px;background:var(--dark);}
+.results-inner{max-width:1160px;margin:0 auto;text-align:center;}
+.results-inner .section-title{color:var(--white);}
+.results-inner .section-eyebrow{justify-content:center;}
+.results-wall{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:56px;}
+.result-block{background:rgba(255,255,255,0.025);padding:40px 24px;text-align:center;border:1px solid rgba(255,255,255,0.04);transition:background 0.2s;}
+.result-block:hover{background:rgba(0,184,164,0.07);}
+.result-num{font-family:var(--serif);font-size:48px;font-weight:600;color:var(--teal);line-height:1;}
+.result-lbl{font-size:13px;color:rgba(255,255,255,0.45);margin-top:8px;line-height:1.45;}
+.result-source{font-size:10px;color:rgba(255,255,255,0.22);margin-top:4px;letter-spacing:0.3px;}
+
+/* ── SKILLS ── */
+#skills{padding:100px 56px;background:var(--white);}
+.skills-inner{max-width:1160px;margin:0 auto;}
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px;}
+.skill-card{background:var(--white);border-radius:16px;padding:30px;border:1px solid rgba(0,0,0,0.07);}
+.skill-icon{font-size:30px;margin-bottom:14px;}
+.skill-cat{font-size:13px;font-weight:700;color:var(--dark);margin-bottom:14px;letter-spacing:0.5px;}
+.skill-list{list-style:none;}
+.skill-list li{font-size:13px;color:var(--mid);padding:5px 0;border-bottom:1px solid rgba(0,0,0,0.04);display:flex;align-items:center;gap:8px;font-weight:300;}
+.skill-list li:last-child{border-bottom:none;}
+.skill-list li::before{content:'▸';color:var(--teal);font-size:10px;flex-shrink:0;}
+
+/* ── ACTION PLAN ── */
+#action{padding:100px 56px;background:var(--dark2);}
+.action-inner{max-width:1160px;margin:0 auto;}
+.action-inner .section-title{color:var(--white);}
+.weeks-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:52px;}
+.week-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:14px;padding:24px;}
+.week-label{font-size:10px;font-weight:700;color:var(--teal);letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;}
+.week-title{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--white);margin-bottom:16px;}
+.week-tasks{list-style:none;}
+.week-tasks li{font-size:13px;color:rgba(255,255,255,0.5);line-height:1.6;padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.04);display:flex;gap:8px;align-items:flex-start;font-weight:300;}
+.week-tasks li:last-child{border-bottom:none;}
+.week-tasks li::before{content:'○';color:var(--teal);font-size:10px;flex-shrink:0;margin-top:3px;}
+
+/* ── CONTACT ── */
+#contact{padding:100px 56px;background:var(--dark);}
+.contact-inner{max-width:640px;margin:0 auto;text-align:center;}
+.contact-inner .section-title{color:var(--white);}
+.contact-sub{font-size:15px;color:rgba(255,255,255,0.45);line-height:1.75;margin:16px auto 44px;font-weight:300;}
+.open-badge{display:inline-flex;align-items:center;gap:8px;background:var(--teal-dim);border:1px solid var(--teal-mid);padding:8px 20px;border-radius:100px;margin-bottom:28px;}
+.open-dot{width:8px;height:8px;background:#00D4A0;border-radius:50%;animation:pulse 2s ease-in-out infinite;}
+.open-badge span{font-size:12px;color:var(--teal);font-weight:600;letter-spacing:0.5px;}
+.contact-links{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;}
+.cl{padding:14px 30px;border-radius:10px;text-decoration:none;font-size:13px;font-weight:600;transition:all 0.2s;letter-spacing:0.3px;}
+.cl-primary{background:var(--teal);color:var(--dark);}
+.cl-primary:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(0,184,164,0.32);}
+.cl-ghost{border:1px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.8);}
+.cl-ghost:hover{border-color:var(--teal);color:var(--teal);}
+
+footer{background:var(--dark);border-top:1px solid rgba(255,255,255,0.05);padding:24px 56px;text-align:center;}
+footer p{font-size:12px;color:rgba(255,255,255,0.25);}
+
+/* ── ANIMATIONS ── */
+.fade-up{opacity:0;transform:translateY(28px);transition:opacity 0.55s ease,transform 0.55s ease;}
+.fade-up.visible{opacity:1;transform:translateY(0);}
+
+@media(max-width:900px){
+  nav{padding:14px 24px;}
+  .hero{padding:100px 24px 60px;}
+  .hero-inner,.about-inner{grid-template-columns:1fr;}
+  .hero-card,.tl-col{display:none;}
+  h1.hero-title{font-size:44px;}
+  section,#about,#cases,#skills,#results,#action,#contact{padding:72px 24px;}
+  .results-wall{grid-template-columns:repeat(2,1fr);}
+  .skills-grid,.weeks-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Evelina <em>Califano</em></div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#cases">Work</a>
+    <a href="#results">Results</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact" class="nav-cta">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow-1"></div>
+  <div class="hero-glow-2"></div>
+  <div class="hero-grid-line"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge"><div class="hero-badge-dot"></div><span>Open to Work · Helsinki, Finland</span></div>
+      <h1 class="hero-title">B2B Marketing<br>that <em>builds</em> &amp;<br><em>converts</em></h1>
+      <p class="hero-subtitle">Marketing Manager · Automation Specialist · Demand Generation</p>
+      <p class="hero-desc">I design marketing systems that generate demand and scale revenue — from high-impact PPC campaigns across Europe to HubSpot architectures that turn leads into pipeline. 5+ years in industrial B2B, space-tech, and deep-tech.</p>
+      <div class="hero-ctas">
+        <a href="#cases" class="btn-primary">View Case Studies</a>
+        <a href="#contact" class="btn-outline">Download CV</a>
+      </div>
+      <div class="hero-stats">
+        <div><div class="stat-num">+22%</div><div class="stat-label">YoY qualified<br>lead growth</div></div>
+        <div><div class="stat-num">7+</div><div class="stat-label">European markets<br>managed</div></div>
+        <div><div class="stat-num">75%</div><div class="stat-label">CRM data<br>accuracy ↑</div></div>
+        <div><div class="stat-num">5+</div><div class="stat-label">Years B2B<br>experience</div></div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hc-label">📊 Performance Snapshot</div>
+      <div class="metric-row">
+        <div class="metric-icon">📈</div>
+        <div><div class="metric-val"><em>+18%</em> CTR</div><div class="metric-sub">Google Ads · Multi-market PPC</div></div>
+      </div>
+      <div class="metric-row">
+        <div class="metric-icon">⚡</div>
+        <div><div class="metric-val"><em>+20%</em> MQL→SQL</div><div class="metric-sub">HubSpot automation · 6 months</div></div>
+      </div>
+      <div class="metric-row">
+        <div class="metric-icon">🎯</div>
+        <div><div class="metric-val"><em>+30%</em> Lead Engagement</div><div class="metric-sub">Pardot / Marketing Cloud</div></div>
+      </div>
+      <div class="metric-row">
+        <div class="metric-icon">🔍</div>
+        <div><div class="metric-val"><em>+25%</em> Organic Traffic</div><div class="metric-sub">SEO · Core Web Vitals</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-inner">
+    <div class="about-body fade-up">
+      <div class="section-eyebrow">About me</div>
+      <h2 class="section-title">Marketing at the intersection of<br><em style="color:var(--teal);font-style:italic">data &amp; creativity</em></h2>
+      <p>Originally from Naples, now based in Helsinki — I've built a career that bridges two worlds: <strong>the analytical rigour of performance marketing</strong> and the storytelling instinct of a creative. My background in drama and arts taught me how to communicate. My business education taught me how to measure it.</p>
+      <p>I thrive in complex B2B environments where marketing has to earn its seat at the revenue table. Whether I'm architecting a HubSpot CRM from scratch, running ABM programmes for strategic accounts, or project-managing a major European trade show — I bring the same combination of <strong>strategic thinking, hands-on execution, and obsessive attention to outcomes.</strong></p>
+      <p>I believe in <em>Amor Fati</em> — embracing the path fully. Right now, that means channelling five years of hard-won B2B experience into the next challenge, where I can build systems that genuinely move revenue.</p>
+      <div class="companies-label">Experience at</div>
+      <div class="companies-list">
+        <div class="co-pill">Metso</div>
+        <div class="co-pill">Kuva Space</div>
+        <div class="co-pill">Krea</div>
+        <div class="co-pill">Globuzzer</div>
+      </div>
+    </div>
+    <div class="fade-up">
+      <div class="photo-placeholder"><span>📸</span>Add your photo here<br><small style="font-weight:300;font-size:11px;opacity:0.7">Professional headshot recommended</small></div>
+      <div class="section-eyebrow" style="margin-bottom:20px;">Timeline</div>
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-col"><div class="tl-dot"></div><div class="tl-line"></div></div><div><div class="tl-date">Aug 2025 – Present</div><div class="tl-role">Marketing Manager</div><div class="tl-co">Kuva Space</div></div></div>
+        <div class="tl-item"><div class="tl-col"><div class="tl-dot"></div><div class="tl-line"></div></div><div><div class="tl-date">May 2021 – Aug 2025</div><div class="tl-role">Senior Digital Marketing Specialist</div><div class="tl-co">Metso (formerly Metso Outotec)</div></div></div>
+        <div class="tl-item"><div class="tl-col"><div class="tl-dot"></div><div class="tl-line"></div></div><div><div class="tl-date">Jan–Jun 2020</div><div class="tl-role">Project Manager</div><div class="tl-co">Krea Luova Toimisto</div></div></div>
+        <div class="tl-item"><div class="tl-col"><div class="tl-dot"></div></div><div><div class="tl-date">2018–2020</div><div class="tl-role">Digital Marketing Consultant</div><div class="tl-co">Marechiaro Jewellery</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section id="cases">
+  <div class="cases-inner">
+    <div class="fade-up">
+      <div class="section-eyebrow">Case Studies</div>
+      <h2 class="section-title">Real campaigns.<br>Real systems. Real results.</h2>
+      <p style="font-size:15px;color:var(--mid);margin-top:8px;font-weight:300;">Click any case study to read the full story — strategy, execution, and outcome.</p>
+    </div>
+    <div class="cases-grid">
+
+      <div class="case-card fade-up" onclick="openModal('cs1')">
+        <div class="case-stripe"></div>
+        <div class="case-body">
+          <div class="case-top"><span class="case-num">01</span><span class="case-tag">Demand Generation</span></div>
+          <div class="case-title">Multi-Market Demand Generation — Metso Europe</div>
+          <div class="case-desc">Built and executed a regional B2B digital marketing strategy across 7+ European countries, managing 5–8 concurrent campaigns with a focus on qualified pipeline growth.</div>
+          <div class="case-pills"><span class="pill">+22% YoY Leads</span><span class="pill">+18% CTR</span><span class="pill">−12% CPC</span><span class="pill">7+ Markets</span></div>
+          <div class="case-cta">Read full case study</div>
+        </div>
+      </div>
+
+      <div class="case-card fade-up" onclick="openModal('cs2')">
+        <div class="case-stripe gold"></div>
+        <div class="case-body">
+          <div class="case-top"><span class="case-num">02</span><span class="case-tag gold-tag">CRM Architecture</span></div>
+          <div class="case-title">HubSpot CRM Build from Scratch — Kuva Space</div>
+          <div class="case-desc">Designed and implemented a full HubSpot CRM with custom objects, automated lead scoring, and nurturing workflows — turning an unstructured pipeline into a scalable revenue engine.</div>
+          <div class="case-pills"><span class="pill">75% Data Accuracy ↑</span><span class="pill">+20% MQL→SQL</span><span class="pill">7 hrs/week saved</span></div>
+          <div class="case-cta">Read full case study</div>
+        </div>
+      </div>
+
+      <div class="case-card fade-up" onclick="openModal('cs3')">
+        <div class="case-stripe"></div>
+        <div class="case-body">
+          <div class="case-top"><span class="case-num">03</span><span class="case-tag">ABM & Sales Enablement</span></div>
+          <div class="case-title">ABM Programme & LinkedIn Ads — Metso Strategic Accounts</div>
+          <div class="case-desc">Designed an account-based marketing programme targeting stalled high-value accounts. Mapped buying committees, created persona-specific content, launched targeted LinkedIn Ads.</div>
+          <div class="case-pills"><span class="pill">Stalled Deals Closed</span><span class="pill">LinkedIn Ads Strategy</span><span class="pill">Sales Enablement</span></div>
+          <div class="case-cta">Read full case study</div>
+        </div>
+      </div>
+
+      <div class="case-card fade-up" onclick="openModal('cs4')">
+        <div class="case-stripe gold"></div>
+        <div class="case-body">
+          <div class="case-top"><span class="case-num">04</span><span class="case-tag gold-tag">Event Marketing</span></div>
+          <div class="case-title">Trade Show Marketing — Steinexpo 2023 & SIM 23/24</div>
+          <div class="case-desc">Owned end-to-end marketing execution for major European industry events. Pre-event campaigns, on-site content production, post-event lead nurturing to maximise pipeline impact.</div>
+          <div class="case-pills"><span class="pill">Full Event Lifecycle</span><span class="pill">Pre + Post Campaigns</span><span class="pill">Video & Photo Coverage</span></div>
+          <div class="case-cta">Read full case study</div>
+        </div>
+      </div>
+
+      <div class="case-card fade-up" onclick="openModal('cs5')">
+        <div class="case-stripe"></div>
+        <div class="case-body">
+          <div class="case-top"><span class="case-num">05</span><span class="case-tag">Marketing Automation</span></div>
+          <div class="case-title">Email Automation & Multi-Language Nurture — Metso Pardot</div>
+          <div class="case-desc">Built scalable automated email workflows in Pardot and Marketing Cloud with multi-language variants, integrated with Salesforce — transforming lead engagement across all European markets.</div>
+          <div class="case-pills"><span class="pill">+30% Lead Engagement</span><span class="pill">7 Markets</span><span class="pill">Salesforce Integration</span></div>
+          <div class="case-cta">Read full case study</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS WALL -->
+<section id="results">
+  <div class="results-inner">
+    <div class="fade-up">
+      <div class="section-eyebrow">Results at a Glance</div>
+      <h2 class="section-title" style="color:var(--white)">Numbers that matter</h2>
+    </div>
+    <div class="results-wall fade-up">
+      <div class="result-block"><div class="result-num">+22%</div><div class="result-lbl">YoY qualified lead growth</div><div class="result-source">Metso · Multi-market PPC</div></div>
+      <div class="result-block"><div class="result-num">+30%</div><div class="result-lbl">Lead engagement lift</div><div class="result-source">Pardot automation</div></div>
+      <div class="result-block"><div class="result-num">+25%</div><div class="result-lbl">Organic traffic growth</div><div class="result-source">SEO · Core Web Vitals</div></div>
+      <div class="result-block"><div class="result-num">75%</div><div class="result-lbl">CRM data accuracy ↑</div><div class="result-source">HubSpot architecture</div></div>
+      <div class="result-block"><div class="result-num">+20%</div><div class="result-lbl">MQL to SQL conversion</div><div class="result-source">Lead scoring · 6 months</div></div>
+      <div class="result-block"><div class="result-num">−12%</div><div class="result-lbl">Cost per click reduction</div><div class="result-source">Google Ads optimisation</div></div>
+      <div class="result-block"><div class="result-num">40+</div><div class="result-lbl">Event qualified prospects</div><div class="result-source">Winter Satellite Workshop</div></div>
+      <div class="result-block"><div class="result-num">7+</div><div class="result-lbl">European markets managed</div><div class="result-source">Simultaneous campaigns</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="skills-inner">
+    <div class="fade-up">
+      <div class="section-eyebrow">Capabilities</div>
+      <h2 class="section-title">Skills &amp; Tools</h2>
+    </div>
+    <div class="skills-grid fade-up">
+      <div class="skill-card">
+        <div class="skill-icon">🚀</div>
+        <div class="skill-cat">Campaign & Demand Gen</div>
+        <ul class="skill-list">
+          <li>Omnichannel Campaign Management</li>
+          <li>Google Ads (Search, Display, Video)</li>
+          <li>Meta Business Suite</li>
+          <li>LinkedIn Ads & ABM</li>
+          <li>SEO / SEM Optimisation</li>
+          <li>Budget Management & ROAS</li>
+          <li>A/B Testing & Creative Direction</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">⚙️</div>
+        <div class="skill-cat">Automation & CRM</div>
+        <ul class="skill-list">
+          <li>HubSpot CRM Architecture</li>
+          <li>Salesforce & Pardot</li>
+          <li>Marketing Cloud & Einstein AI</li>
+          <li>Lead Scoring & Nurturing</li>
+          <li>Multi-language Email Workflows</li>
+          <li>Microsoft Dynamics</li>
+          <li>Pipeline Reporting</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">📊</div>
+        <div class="skill-cat">Analytics & Content</div>
+        <ul class="skill-list">
+          <li>Google Analytics 4</li>
+          <li>Power BI Dashboards</li>
+          <li>SEMRush & HotJar</li>
+          <li>Optimizely CMS</li>
+          <li>Content Strategy & Storytelling</li>
+          <li>Video Production (DaVinci/Premiere)</li>
+          <li>Adobe Creative Cloud</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 30-DAY ACTION PLAN -->
+<section id="action">
+  <div class="action-inner">
+    <div class="fade-up">
+      <div class="section-eyebrow" style="color:var(--teal)">Your Roadmap</div>
+      <h2 class="section-title">30-Day Portfolio Build Plan</h2>
+      <p style="font-size:14px;color:rgba(255,255,255,0.4);margin-top:8px;font-weight:300;">Follow this week by week to go from mockup to live, shareable portfolio.</p>
+    </div>
+    <div class="weeks-grid fade-up">
+      <div class="week-card">
+        <div class="week-label">Week 1</div>
+        <div class="week-title">Gather Assets</div>
+        <ul class="week-tasks">
+          <li>Pull screenshots from Google Ads, HubSpot, Pardot — blur sensitive data</li>
+          <li>Download event photos from Steinexpo & SIM events</li>
+          <li>Save email workflow diagrams and campaign structures</li>
+          <li>Write first draft of Case Study 01 (Metso Demand Gen)</li>
+        </ul>
+      </div>
+      <div class="week-card">
+        <div class="week-label">Week 2</div>
+        <div class="week-title">Build Structure</div>
+        <ul class="week-tasks">
+          <li>Set up Notion or publish this HTML on GitHub Pages / Netlify (free)</li>
+          <li>Add your professional photo to the About section</li>
+          <li>Write Case Studies 02 (HubSpot) and 03 (ABM)</li>
+          <li>Add real visuals inline — workflow diagrams, blurred dashboards</li>
+        </ul>
+      </div>
+      <div class="week-card">
+        <div class="week-label">Week 3</div>
+        <div class="week-title">Complete & Refine</div>
+        <ul class="week-tasks">
+          <li>Write Case Studies 04 (Trade Show) and 05 (Email Automation)</li>
+          <li>Update LinkedIn profile with portfolio URL</li>
+          <li>Share with 1–2 trusted contacts for feedback</li>
+          <li>Refine wording based on target roles</li>
+        </ul>
+      </div>
+      <div class="week-card">
+        <div class="week-label">Week 4</div>
+        <div class="week-title">Launch & Apply</div>
+        <ul class="week-tasks">
+          <li>Add portfolio URL to CV header and email signature</li>
+          <li>Create a PDF version (6–8 pages) as a leave-behind</li>
+          <li>Update LinkedIn headline: "B2B Marketing Manager · See my work: [url]"</li>
+          <li>Start applying — your portfolio does the talking</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-inner fade-up">
+    <div class="open-badge"><div class="open-dot"></div><span>Open to B2B Marketing Manager & Automation roles</span></div>
+    <h2 class="section-title">Let's work together</h2>
+    <p class="contact-sub">Based in Helsinki. Available now. Looking for B2B Marketing Manager and Marketing Automation/CRM roles where I can make a real commercial impact.</p>
+    <div class="contact-links">
+      <a href="mailto:evelinacalifano@gmail.com" class="cl cl-primary">✉ Send an Email</a>
+      <a href="https://linkedin.com" class="cl cl-ghost">LinkedIn Profile</a>
+      <a href="#" class="cl cl-ghost">Download CV</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Evelina Califano · B2B Marketing Manager · Helsinki, Finland · evelinacalifano@gmail.com</p>
+</footer>
+
+<!-- MODALS -->
+<div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
+  <div class="modal" id="modal-box">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div id="modal-content"></div>
+  </div>
+</div>
+
+<script>
+const cases = {
+  cs1: {
+    eyebrow: '01 · Demand Generation',
+    title: 'Multi-Market Demand Generation — Metso Market Areas Europe',
+    situation: 'When I joined Metso\'s Market Areas Europe team in May 2021, a regional digital marketing strategy was already in place — but execution was fragmented and the connection between digital activity and commercial outcomes was not clearly measured. The primary goal was to support aggregate sales growth across Central Eastern Europe (CEA) countries, while also serving Iberia, France, and the Nordics (Finland, Sweden, Norway). Each market had its own local sales managers, its own language needs, and its own set of customer pain points — primarily in the quarrying and aggregates industry. The challenge was building a digital programme that could work at scale across all of them without losing relevance at the local level.',
+    task: 'Coordinate and execute a multi-channel digital marketing strategy across 7+ European market areas — driving brand awareness, supporting lead generation, and enabling local sales managers with the content and digital tools they needed to address their customers\' specific pain points. This meant owning PPC, email marketing, content, and LinkedIn campaigns simultaneously, while acting as the connective tissue between global brand direction and local commercial needs.',
+    actions: [
+      '📋 <strong>Market & audience alignment:</strong> Worked closely with local sales managers across CEA, Iberia, France, and the Nordics to understand key pain points within their quarry and aggregates customer base — translating those insights into campaign messaging and email content that spoke directly to real customer challenges',
+      '📧 <strong>Quarterly newsletter programme:</strong> Produced and managed a multilingual quarterly newsletter using Pardot — covering all Market Areas languages — with Pardot Engagement Studio workflows and tracking URLs to segment audiences by interest and behaviour, enabling more targeted follow-up',
+      '💰 <strong>PPC campaign management:</strong> Planned and executed year-round Google Ads campaigns (Search and Display) with an 80/20 budget split: 80% in English as the primary commercial language, 20% allocated to French-speaking markets. Ran parallel LinkedIn Ads campaigns to reach decision-makers in the aggregates industry at a professional level',
+      '📊 <strong>Performance reporting:</strong> Established campaign KPIs and built reporting for sales and leadership using Google Analytics and Power BI — enabling data-driven decisions and in-flight adjustments rather than end-of-quarter reviews',
+      '🔍 <strong>SEO & content:</strong> Conducted keyword research using SEMRush and launched region-specific landing pages to support GTM campaigns; improved organic visibility through metadata, internal linking, and Core Web Vitals optimisation'
+    ],
+    results: [
+      {num: '+22%', lbl: 'YoY qualified lead growth'},
+      {num: '+18%', lbl: 'Google Ads CTR increase'},
+      {num: '−12%', lbl: 'Cost per click reduction'},
+    ],
+    assets: '📁 Assets to add: Google Ads performance screenshot (blur spend figures) · Pardot workflow diagram · Newsletter example (anonymised) · Landing page screenshot',
+    learn: '<strong>What I learned:</strong> The most valuable thing I did in this role was not a campaign — it was the conversations I had with local sales managers before building anything. Understanding that a quarry operator in Poland has different pressures than one in France completely changed how I wrote copy and structured the email content. Digital at scale only works when it\'s grounded in that kind of local intelligence. The 80/20 language budget split also taught me that English-first doesn\'t mean English-only — the French-market campaigns consistently outperformed on engagement precisely because the audience felt spoken to directly.'
+  },
+  cs2: {
+    eyebrow: '02 · CRM Architecture',
+    title: 'HubSpot CRM Build from Scratch — Kuva Space',
+    situation: 'Kuva Space, a Finnish New Space company, had no structured CRM or lead management process. Leads were tracked manually in spreadsheets, pipeline visibility was near zero, and the marketing-to-sales handoff was entirely informal.',
+    task: 'Join as the sole marketing function and build an entire HubSpot CRM architecture from scratch — enabling scalable pipeline management, automated nurturing, and reliable reporting for executive leadership.',
+    actions: [
+      'Designed custom HubSpot objects to track satellite capacity alongside standard CRM contact/deal records',
+      'Engineered a lead scoring model and automated nurturing workflows for different buyer segments',
+      'Built executive reporting dashboards replacing 7 hours per week of manual reporting',
+      'Spearheaded the Vessel Detection case study launch: built landing pages, tracking URLs, and automated follow-up sequences',
+      'Led end-to-end event management for the Winter Satellite Workshop (2,000+ attendees); implemented digital lead capture generating 40+ qualified prospects'
+    ],
+    results: [
+      {num: '75%', lbl: 'CRM data accuracy improvement'},
+      {num: '+20%', lbl: 'MQL-to-SQL conversion in 6 months'},
+      {num: '7 hrs', lbl: 'Per week saved on reporting'},
+    ],
+    learn: '<strong>What I learned:</strong> Building from zero is a forcing function for clarity. When there\'s no existing structure to inherit, you have to make every architectural decision intentional — which ultimately produces cleaner, more scalable systems than retrofitting an existing setup.'
+  },
+  cs3: {
+    eyebrow: '03 · ABM & Sales Enablement',
+    title: 'ABM Programme & LinkedIn Ads — Metso Strategic Accounts',
+    situation: 'Several high-value strategic accounts had strong potential but were stalled in the sales pipeline. The commercial teams had established relationships, but deals lacked momentum — the buying committees were not sufficiently engaged.',
+    task: 'Design and execute an account-based marketing programme to re-engage decision-makers at specific named accounts, and deliver sales enablement assets that gave the commercial team better tools to progress conversations.',
+    actions: [
+      'Mapped the buying committee at each target account — identifying decision-makers, influencers, and blockers by role',
+      'Developed tailored content per persona that addressed specific pain points at each account',
+      'Launched LinkedIn Ads targeting specific job titles at named companies — using matched audiences and lookalike targeting',
+      'Delivered sales enablement assets: account-specific banners, CTAs, and conversation-starter content',
+      'Aligned weekly with Strategic Account Managers to iterate on targeting and messaging based on live account feedback'
+    ],
+    results: [
+      {num: '✓', lbl: 'Multiple stalled key deals closed'},
+      {num: '✓', lbl: 'LinkedIn Ads strategy validated'},
+      {num: '✓', lbl: 'Repeatable ABM playbook built'},
+    ],
+    learn: '<strong>What I learned:</strong> ABM only works when marketing and sales are genuinely co-designing the programme — not just handing off assets. Weekly alignment calls with the account managers were the single most important factor in making this work.'
+  },
+  cs4: {
+    eyebrow: '04 · Event Marketing',
+    title: 'Trade Show Marketing — Steinexpo 2023 & SIM 23/24',
+    situation: 'Metso was exhibiting at Steinexpo 2023 and SIM 23 & 24 — major European industry trade shows. These events represented significant investment and a key pipeline generation opportunity, but the digital marketing around them had historically been underdeveloped.',
+    task: 'Own the full digital marketing execution for each event — from pre-event awareness campaigns through to post-event lead nurturing — to maximise the commercial return on Metso\'s event investment.',
+    actions: [
+      'Built pre-event campaign: email sequences, social ads, and content to drive registrations and pre-booked meetings',
+      'Coordinated content production and on-site coverage — photography, video, social media',
+      'Created post-event nurture campaign to convert event contacts into pipeline opportunities',
+      'Managed cross-functional coordination with product, sales, and brand teams on messaging and assets',
+      'Produced real-time social content during events to extend reach beyond physical attendees'
+    ],
+    results: [
+      {num: '✓', lbl: 'Full event marketing lifecycle owned'},
+      {num: '✓', lbl: 'Qualified pipeline post-event'},
+      {num: '✓', lbl: 'On-site video & photo assets produced'},
+    ],
+    learn: '<strong>What I learned:</strong> The post-event nurture campaign is consistently underinvested — yet it\'s where the pipeline is actually converted. Starting the post-event sequence before the event is over (while the impression is fresh) makes a measurable difference in conversion rates.'
+  },
+  cs5: {
+    eyebrow: '05 · Marketing Automation',
+    title: 'Email Automation & Multi-Language Nurture — Metso Pardot',
+    situation: 'Metso\'s email marketing was largely manual and single-language, with low engagement across European markets. Lead nurturing was inconsistent, with no structured follow-up workflows integrated into Salesforce.',
+    task: 'Build scalable automated email workflows in Pardot and Marketing Cloud that could operate across multiple languages and markets, with full Salesforce integration for closed-loop reporting.',
+    actions: [
+      'Designed nurture workflow architecture in Pardot with multi-language variants for 7+ European markets',
+      'Built landing pages, forms, and dynamic content blocks aligned with Salesforce campaign tracking',
+      'Created automated email sequences tailored to different stages of the buyer journey',
+      'Integrated workflows fully with Salesforce for closed-loop reporting and lead scoring updates',
+      'Set up engagement-based triggers — automatically routing highly engaged leads to sales for follow-up'
+    ],
+    results: [
+      {num: '+30%', lbl: 'Lead engagement increase'},
+      {num: '7+', lbl: 'Markets with active workflows'},
+      {num: '✓', lbl: 'Full Salesforce closed-loop reporting'},
+    ],
+    learn: '<strong>What I learned:</strong> Multi-language automation is as much a content operations challenge as a technical one. Building a clear translation and localisation workflow before launching the automation saved significant rework — and produced much better engagement than machine-translated alternatives.'
+  }
+};
+
+function openModal(id) {
+  const c = cases[id];
+  const resultsHTML = c.results.map(r => `<div class="modal-result"><div class="modal-result-num">${r.num}</div><div class="modal-result-label">${r.lbl}</div></div>`).join('');
+  const actionsHTML = c.actions.map(a => `<li>${a}</li>`).join('');
+  const actionsStyle = 'list-style:none;';
+  document.getElementById('modal-content').innerHTML = `
+    <div class="modal-header">
+      <div class="modal-eyebrow">${c.eyebrow}</div>
+      <div class="modal-title">${c.title}</div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section"><h4>Situation</h4><p>${c.situation}</p></div>
+      <div class="modal-section"><h4>Task</h4><p>${c.task}</p></div>
+      <div class="modal-section"><h4>Actions</h4><ul>${actionsHTML}</ul></div>
+      <div class="modal-section"><h4>Results</h4><div class="modal-results">${resultsHTML}</div></div>
+      ${c.assets ? `<div class="modal-section"><div style="background:#FFF8E1;border-left:3px solid #E8A245;border-radius:0 8px 8px 0;padding:12px 16px;font-size:13px;color:#7A5800;font-style:italic;">${c.assets}</div></div>` : ''}
+      <div class="modal-learn"><p>${c.learn}</p></div>
+    </div>`;
+  document.getElementById('modal-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal(e) {
+  if (!e || e.target === document.getElementById('modal-overlay') || e.currentTarget.classList.contains('modal-close')) {
+    document.getElementById('modal-overlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+}
+
+document.addEventListener('keydown', e => { if(e.key==='Escape') closeModal({target:document.getElementById('modal-overlay')}); });
+
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) setTimeout(() => entry.target.classList.add('visible'), i * 90);
+  });
+}, {threshold: 0.08});
+document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t) t.scrollIntoView({behavior:'smooth', block:'start'});
+  });
+});
+</script>
+</body>
+</html>
