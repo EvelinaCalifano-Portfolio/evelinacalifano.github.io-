@@ -11,7 +11,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Evelina Califano — B2B Marketing Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Syne:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,6 +19,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KJXN6PSQ"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+
 
 <!-- NAV -->
 <nav>
@@ -33,6 +34,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Menu">☰</button>
 </nav>
+<div class="scroll-progress" id="scrollProgress"></div>
 <div class="mobile-menu" id="mobileMenu">
   <a href="#about" onclick="toggleMobileMenu()">About</a>
   <a href="#cases" onclick="toggleMobileMenu()">Work</a>
@@ -75,11 +77,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p>I thrive in complex B2B environments where marketing answers to revenue. Whether I'm <strong>architecting a HubSpot CRM from scratch, running ABM programmes for strategic accounts, or project-managing a major European trade show</strong>, I work the same way: at Metso, every campaign was reported back to the regional sales leads it served.</p>
       <p>I believe in <em>Amor Fati</em>: embracing the path fully. Naples to Helsinki, drama school to demand gen: none of it was the plan, and all of it is the reason the campaigns and thinking creatively work. </p>
       <div class="companies-label">Experience at</div>
-      <div class="companies-list">
-        <div class="co-pill">Metso</div>
-        <div class="co-pill">Kuva Space</div>
-        <div class="co-pill">Krea</div>
-        <div class="co-pill">Globuzzer</div>
+      <div class="companies-marquee">
+        <div class="companies-track">
+          <div class="co-pill">Metso</div>
+          <div class="co-pill">Kuva Space</div>
+          <div class="co-pill">Krea</div>
+          <div class="co-pill">Globuzzer</div>
+          <div class="co-pill">Metso</div>
+          <div class="co-pill">Kuva Space</div>
+          <div class="co-pill">Krea</div>
+          <div class="co-pill">Globuzzer</div>
+        </div>
       </div>
     </div>
     <div class="fade-up">
@@ -108,7 +116,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a class="case-card fade-up" href="case-cs1.html">
         <div class="case-stripe" data-num="01"></div>
         <div class="case-body">
-          <div class="case-top"><span class="case-num">01</span><span class="case-tag">Demand Generation</span></div>
+          <div class="case-top"><span class="case-num">01</span><span class="case-tag">Demand Generation</span></div><div class="case-hover-stat"><span class="chs-num">+22%</span><span class="chs-lbl">YoY lead growth</span></div>
           <div class="case-title">Multi-Market Demand Generation – Metso Europe</div>
           <div class="case-desc">Metso's seven European markets were running campaigns with no shared reporting and no shared read on what worked. I built one programme across email, paid search, LinkedIn, and trade media, grounded in what local sales managers actually heard from their customers.</div>
           <div class="case-pills"><span class="pill">+22% YoY Leads</span><span class="pill">+18% CTR</span><span class="pill">−12% CPC</span><span class="pill">7 Markets</span></div>
@@ -119,7 +127,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a class="case-card fade-up" href="case-cs3.html">
         <div class="case-stripe gold" data-num="02"></div>
         <div class="case-body">
-          <div class="case-top"><span class="case-num">02</span><span class="case-tag gold-tag">ABM Strategy & Reporting</span></div>
+          <div class="case-top"><span class="case-num">02</span><span class="case-tag gold-tag">ABM Strategy & Reporting</span></div><div class="case-hover-stat"><span class="chs-num">20</span><span class="chs-lbl">ABM campaigns delivered</span></div>
           <div class="case-title">Account-Based Marketing – Metso & Kuva Space </div>
           <div class="case-desc">Metso's strategic accounts needed more than broad campaigns. Over two years I ran 20 LinkedIn ABM campaigns across 5 product lines and 4 EU markets, with a documented sales-to-marketing handoff and per-campaign reporting to regional sales leads.</div>
           <div class="case-pills"><span class="pill">20 ABM Campaigns</span><span class="pill">493K+ Impressions</span><span class="pill">Launched Kuvaspace's first LinkedIn Ad Campaign</span><span class="pill">Sales→Marketing Process</span></div>
@@ -130,7 +138,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a class="case-card fade-up" href="case-cs4.html">
         <div class="case-stripe" data-num="03"></div>
         <div class="case-body">
-          <div class="case-top"><span class="case-num">03</span><span class="case-tag">Event Marketing</span></div>
+          <div class="case-top"><span class="case-num">03</span><span class="case-tag">Event Marketing</span></div><div class="case-hover-stat"><span class="chs-num">6</span><span class="chs-lbl">Trade shows owned</span></div>
           <div class="case-title">Trade Show &amp; Event Marketing – 6 Major European Industry Events (2022–2024)</div>
           <div class="case-desc">Owned digital marketing for six European trade shows from 2022 to 2024, from pre-event email to post-show nurture, across six countries. Flagship: Steinexpo 2023, with 61,530 visitors and €27.7M pipeline influenced.</div>
           <div class="case-pills"><span class="pill">6 Trade Shows</span><span class="pill">€27.7M Pipeline</span><span class="pill">26M+ Impressions</span></div>
@@ -141,7 +149,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a class="case-card fade-up" href="case-cs5.html">
         <div class="case-stripe gold" data-num="04"></div>
         <div class="case-body">
-          <div class="case-top"><span class="case-num">04</span><span class="case-tag gold-tag">Marketing Automation</span></div>
+          <div class="case-top"><span class="case-num">04</span><span class="case-tag gold-tag">Marketing Automation</span></div><div class="case-hover-stat"><span class="chs-num">+30%</span><span class="chs-lbl">Lead engagement lift</span></div>
           <div class="case-title">Email Automation &amp; Multi-Language Nurture – Metso Pardot &amp; Salesforce Marketing Cloud</div>
           <div class="case-desc">Email in Europe meant one language doing the work of seven. I built automated nurture in Pardot and Salesforce Marketing Cloud that routes each market to a local-language send from a single source, with full closed-loop reporting back to Salesforce.</div>
           <div class="case-pills"><span class="pill">+30% Lead Engagement</span><span class="pill">7 Markets</span><span class="pill">Salesforce Integration</span></div>
@@ -152,7 +160,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a class="case-card fade-up" href="case-cs6.html">
         <div class="case-stripe" data-num="05"></div>
         <div class="case-body">
-          <div class="case-top"><span class="case-num">05</span><span class="case-tag">SEO & Content</span></div>
+          <div class="case-top"><span class="case-num">05</span><span class="case-tag">SEO & Content</span></div><div class="case-hover-stat"><span class="chs-num">4</span><span class="chs-lbl">Country domains run</span></div>
           <div class="case-title">Local-Market Web Publishing &amp; SEO – Metso Europe</div>
           <div class="case-desc">Four Metso country domains (.fi, .se, .fr, .de) needed local relevance, not translated copy. I ran annual keyword audits, built event landing pages, co-produced local case studies with product managers and industry-expert local writers/journalists, and reported monthly in Piwik Pro.At Kuva Space, I set up their analytics from zero and watched visitor traffic more than double in five months as the content programme kicked in.</div>
           <div class="case-pills"><span class="pill">SEO & SERP opt Strategy</span><span class="pill">4 EU Domains</span><span class="pill">2.3× Traffic Growth</span><span class="pill">11 Event Pages</span></div>
@@ -163,7 +171,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a class="case-card fade-up" href="case-cs2.html">
         <div class="case-stripe gold" data-num="06"></div>
         <div class="case-body">
-          <div class="case-top"><span class="case-num">06</span><span class="case-tag gold-tag">CRM & BD Process</span></div>
+          <div class="case-top"><span class="case-num">06</span><span class="case-tag gold-tag">CRM & BD Process</span></div><div class="case-hover-stat"><span class="chs-num">~68%</span><span class="chs-lbl">CRM accuracy lift</span></div>
           <div class="case-title">CRM Architecture &amp; Commercial Pipeline</div>
           <div class="case-desc"> Two CRM failures, two fixes. At Metso, I corrected 650+ duplicate installed-base records so Salesforce and SAP could finally agree, lifting CRM accuracy 65-70% across EUE. At Kuva Space, I rebuilt 1,038 broken contacts and shipped their first sales pipeline in four months, personal deal views, automated lead capture, and all.</div>
           <div class="case-pills"><span class="pill">1,038 Contacts Cleaned</span><span class="pill">+20% MQL→SQL</span><span class="pill">+68% CRM Data Accuracy (EUE)</span></div>
