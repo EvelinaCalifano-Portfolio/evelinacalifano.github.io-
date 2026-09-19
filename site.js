@@ -16,6 +16,13 @@ const obs = new IntersectionObserver((entries) => {
 }, {threshold: 0.08});
 document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
 
+// Safety net: if for any reason the IntersectionObserver never fires
+// (slow rendering, heavy page, background tab, etc.), force reveal
+// fade-up content after 1.5s so the page can never get stuck blank.
+setTimeout(() => {
+  document.querySelectorAll('.fade-up:not(.visible)').forEach(el => el.classList.add('visible'));
+}, 1500);
+
 const scrollBar = document.getElementById('scrollProgress');
 function updateScrollProgress() {
   if (!scrollBar) return;
