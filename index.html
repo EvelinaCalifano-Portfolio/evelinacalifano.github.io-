@@ -26,6 +26,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="nav-logo">Evelina <em>Califano</em></div>
   <div class="nav-links">
     <a href="#about">About</a>
+    <a href="#vibe">Video</a>
     <a href="#cases">Work</a>
     <a href="#results">Results</a>
     <a href="#skills">Skills</a>
@@ -37,6 +38,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="scroll-progress" id="scrollProgress"></div>
 <div class="mobile-menu" id="mobileMenu">
   <a href="#about" onclick="toggleMobileMenu()">About</a>
+  <a href="#vibe" onclick="toggleMobileMenu()">Video</a>
   <a href="#cases" onclick="toggleMobileMenu()">Work</a>
   <a href="#results" onclick="toggleMobileMenu()">Results</a>
   <a href="#skills" onclick="toggleMobileMenu()">Skills</a>
@@ -52,10 +54,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="hero-kicker">Naples &rarr; Helsinki</div>
       <h1 class="hero-title">I run the campaigns<br>& <em>build the systems</em><br>behind them</h1>
       <p class="hero-subtitle">B2B Marketing Manager · Industrial, Mining &amp; Aggregates · Demand Generation &amp; Marketing Automation</p>
-      <p class="hero-desc">I run multi-market PPC and ABM programmes, then engineer the HubSpot and Salesforce architecture that turns what they generate into pipeline. 5+ years in industrial B2B and space-tech, across 7 European markets.</p>
+      <p class="hero-desc">I run multi-market PPC and ABM programs, then engineer the HubSpot and Salesforce architecture that turns what they generate into pipeline. 5+ years in industrial B2B and space-tech, across 7 European markets.</p>
       <div class="hero-ctas">
         <a href="#cases" class="btn-primary">View Case Studies</a>
       </div>
+
       <div class="hero-stats">
         <div><div class="stat-num">+22%</div><div class="stat-label">YoY qualified<br>lead growth</div></div>
         <div><div class="stat-num">7</div><div class="stat-label">European markets<br>managed</div></div>
@@ -73,7 +76,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="section-eyebrow">About me</div>
       <h2 class="section-title">Marketing at the intersection of<br><em style="color:var(--teal);font-style:italic">data &amp; creativity</em></h2>
       <p>Originally from Naples, I've called Helsinki home for the past 10 years. My background in drama and arts taught me how to communicate. My business education taught me how to measure it. I bring both to <strong>B2B performance marketing</strong>: analytical discipline with a storyteller's instinct.</p>
-      <p>I thrive in complex B2B environments where marketing answers to revenue. Whether I'm <strong>architecting a HubSpot CRM from scratch, running ABM programmes for strategic accounts, or project-managing a major European trade show</strong>, I work the same way no matter where I am: every campaign gets reported back to the sales team it exists to serve.</p>
+      <p>I thrive in complex B2B environments where marketing answers to revenue. Whether I'm <strong>architecting a HubSpot CRM from scratch, running ABM programs for strategic accounts, or project-managing a major European trade show</strong>, I work the same way no matter where I am: every campaign gets reported back to the sales team it exists to serve.</p>
       <p>Off the clock I'm still a theatre person. I read scripts for fun and I'm slowly writing one of my own. I cook my way through other cultures one cuisine at a time, and I pick up languages fast enough that people assume I planned it. It's the same curiosity I bring to work, pointed at different ingredients.</p>
       <p>I believe in <em>Amor Fati</em>: embracing the path fully. Naples to Helsinki, drama school to demand gen, none of it was the plan, and all of it is why the work still has both discipline and imagination in it.</p>
       <div class="companies-label">Experience at</div>
@@ -103,6 +106,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
+<!-- VIBE CHECK -->
+<section id="vibe">
+  <div class="hero-glow-1"></div>
+  <div class="hero-glow-2"></div>
+  <div class="vibe-inner fade-up">
+    <div class="vibe-text">
+      <div class="section-eyebrow">Intermission</div>
+      <h2 class="section-title" style="color:var(--cream);">The trailer before <em style="color:var(--rust);font-style:italic;">the reviews.</em></h2>
+      <p class="vibe-desc"><strong style="color:var(--cream);">Who is Evelina?</strong><br>A sneak peek of who I am and how I like to work, in a short video.</p>
+      <a href="https://youtu.be/gcY4IxO_y2o" target="_blank" rel="noopener" class="btn-primary" style="display:inline-flex;align-items:center;gap:8px;" onclick="loadVibeVideo(document.querySelector('.vibe-media')); return false;">&#9654; Press play</a>
+    </div>
+    <div class="vibe-media-wrap">
+      <a class="vibe-media" href="https://youtu.be/gcY4IxO_y2o" target="_blank" rel="noopener" data-id="gcY4IxO_y2o" onclick="loadVibeVideo(this); return false;">
+        <img src="https://i3.ytimg.com/vi/gcY4IxO_y2o/hqdefault.jpg" alt="Video introduction thumbnail">
+        <div class="vibe-play"><div class="vibe-play-btn"><div class="vibe-triangle"></div></div></div>
+      </a>
+      <p style="font-size:10px;color:rgba(246,241,231,0.45);font-style:italic;text-align:center;margin-top:10px;">No pets were mistreated while recording this video.</p>
+    </div>
+  </div>
+</section>
+
 <!-- CASE STUDIES -->
 <section id="cases">
   <div class="cases-inner">
@@ -118,7 +142,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="case-body">
           <div class="case-top"><span class="case-num">01</span><span class="case-tag">Demand Generation</span></div><div class="case-hover-stat"><span class="chs-num">+22%</span><span class="chs-lbl">YoY lead growth</span></div>
           <div class="case-title">Multi-Market Demand Generation – Metso Europe</div>
-          <div class="case-desc">Metso's seven European markets were running campaigns with no shared reporting and no shared read on what worked. I built one programme across email, paid search, LinkedIn, and trade media, grounded in what local sales managers actually heard from their customers.</div>
+          <div class="case-desc">Metso's seven European markets were running campaigns with no shared reporting and no shared read on what worked. I built one program across email, paid search, LinkedIn, and trade media, grounded in what local sales managers actually heard from their customers.</div>
           <div class="case-pills"><span class="pill">+22% YoY Leads</span><span class="pill">+18% CTR</span><span class="pill">−12% CPC</span><span class="pill">7 Markets</span></div>
           <div class="case-cta">Read full case study</div>
         </div>
@@ -193,7 +217,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="results-wall fade-up">
       <div class="result-block"><div class="result-num">€27.7M</div><div class="result-lbl">Pipeline influenced</div><div class="result-source">Steinexpo 2023 · 36 opportunities</div></div>
       <div class="result-block"><div class="result-num">20</div><div class="result-lbl">ABM campaigns delivered</div><div class="result-source">Metso · 5 product lines · 4 EU markets</div></div>
-      <div class="result-block"><div class="result-num">493K+</div><div class="result-lbl">ABM impressions</div><div class="result-source">Metso programme · Oct 2023 – Aug 2025</div></div>
+      <div class="result-block"><div class="result-num">493K+</div><div class="result-lbl">ABM impressions</div><div class="result-source">Metso program · Oct 2023 – Aug 2025</div></div>
       <div class="result-block"><div class="result-num">26M+</div><div class="result-lbl">Social impressions</div><div class="result-source">Steinexpo 2023 · LinkedIn + Facebook</div></div>
       <div class="result-block"><div class="result-num">6</div><div class="result-lbl">Major trade shows led</div><div class="result-source">Central &amp; Northern Europe · 2022–2024</div></div>
       <div class="result-block"><div class="result-num">+22%</div><div class="result-lbl">YoY qualified lead growth</div><div class="result-source">Metso multichannel campaigns · 7 markets</div></div>
@@ -236,7 +260,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li>Multi-language Email Sequences</li>
           <li>Lead Scoring &amp; Nurturing</li>
           <li>ABM, Pipeline Reporting &amp; Forecasting</li>
-          <li>Tool Onboarding &amp; Team Training (HubSpot · MCAE)</li>
+          <li>Tool Onboarding &amp; Team Training (HubSpot · MCAE (prev. Pardot))</li>
         </ul>
       </div>
       <div class="skill-card">
@@ -347,6 +371,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <p>Evelina Califano · B2B Marketing Manager · Helsinki, Finland · evelinacalifano@gmail.com</p>
 </footer>
 
+<script>
+function loadVibeVideo(el){
+  if(!el || !el.dataset || !el.dataset.id) return;
+  const id = el.dataset.id;
+  el.outerHTML = `<div class="vibe-media loaded">
+    <iframe src="https://www.youtube.com/embed/${id}?autoplay=1"
+      allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>`;
+}
+</script>
 <script src="site.js"></script>
 </body>
 </html>
